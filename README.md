@@ -2,24 +2,24 @@
 
 确保你有一台带有NVIDIA GPU和Python 2.7的机器，并且有大约100 GB的磁盘空间。<br>
 
-配置anaconda环境变量
-echo $PATH
-vim ~/.bashrc
-export PATH="/path/to/anaconda/bin:$PATH"
-source ~/.bashrc
+配置anaconda环境变量<br>
+回显 $PATH<br>
+vim ~/.bashrc<br>
+导出 PATH=""/path/to/anaconda/bin:$PATH"<br>
+ source ~/.bashrc<br>
 
-服务器环境配置步骤：
-1.下载anaconda
-2.bash anaconda.sh
-3.根据项目要求创建anaconda环境
-conda create -n env_name python=2.7
-4.conda env list查看conda环境是否创建成功
-5.conda activate env_name激活conda环境
-6.安装pytorch+cuda
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-7.export PATH="/path/to/anaconda/bin:$PATH"   注：/path/to/anaconda/bin是刚刚anaconda安装路径
-8.source ~/.bashrc
-9.ok!
+服务器环境配置步骤：<br>
+1.下载anaconda<br>
+2. 执行 anaconda.sh<br>
+3. 根据项目要求创建anaconda环境<br>
+conda create -n env_name python=2.7<br>
+4.conda env list查看conda环境是否创建成功<br>
+5.conda activate env_name激活conda环境<br>
+6. 安装pytorch+cuda<br>
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118<br>
+7. export PATH="/path/to/anaconda/bin:$PATH"   注：/path/to/anaconda/bin是刚刚anaconda安装路径<br>
+8. 源 ~/.bashrc<br>
+9. 好的！<br>
 
 pytorch==1.1.0 <br>
 点击==7.0
@@ -49,17 +49,18 @@ bash 工具/处理.sh
 了解模型结构，并下载论文原代码，理清原论文模型架构并复现原论文。<br>
 之后阅读改代码即可。<换行>
 
-代码在源代码上进行大幅度修改<换行>
+代码在源代码上进行大幅度修改
 mian.py 训练文件<br>
 eval.py 测试文件<br>
 tools.py 共享层<br>
-utils.py 工具类<换行>
+utils.py 工具类
+
 language_model.py 文本模型类<br>
-fusion_modules.py 多模态融合类<换行>
-classifier.py 分类器<换行>
+fusion_modules.py 多模态融合类
+分类器.py 分类器
 fc.py 全连接层类等<br>
-dataset.py 数据集预处理类<换行>
-coor_main.py 模型架构类<换行>
+dataset.py 数据集预处理类
+coor_main.py 模型架构类
 attention.py 注意力机制类<br>
 loss_functions.py 损失函数类<换行>
 请输入具体的网页文本内容，以便我进行翻译。
