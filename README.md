@@ -22,23 +22,23 @@ bash 工具/处理.sh
 ```
 处理数据<换行>
 
-阅读文献Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering
-了解模型结构，并下载论文原代码，理清原论文模型架构并复现原论文。
-之后阅读改代码即可。
+阅读文献Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering<br>
+了解模型结构，并下载论文原代码，理清原论文模型架构并复现原论文。<br>
+之后阅读改代码即可。<br>
 
-代码在源代码上进行大幅度修改
-mian.py 训练文件
-eval.py 测试文件
-tools.py 共享层
-utils.py 工具类
-language_model.py 文本模型类
-fusion_modules.py 多模态融合类
-classifier.py 分类器
-fc.py 全连接层类等
-dataset.py 数据集预处理类
-coor_main.py 模型架构类
-attention.py 注意力机制类
-loss_functions.py 损失函数类
+代码在源代码上进行大幅度修改<br>
+mian.py 训练文件<br>
+eval.py 测试文件<br>
+tools.py 共享层<br>
+utils.py 工具类<br>
+language_model.py 文本模型类<br>
+fusion_modules.py 多模态融合类<br>
+classifier.py 分类器<br>
+fc.py 全连接层类等<br>
+dataset.py 数据集预处理类<br>
+coor_main.py 模型架构类<br>
+attention.py 注意力机制类<br>
+loss_functions.py 损失函数类<br>
 ...
 
 ### 训练
