@@ -8,7 +8,8 @@ numpy==1.16.5 <br>
 tqdm==4.35.0 <br>
 
 ### 训练数据下载
-你可以使用
+首先通过tools文件中，使用download.sh下载数据文件，通过process.sh对文件进行处理
+你可以
 ```
 bash tools/download.sh
 ```
@@ -20,6 +21,25 @@ bash tools/download.sh
 bash 工具/处理.sh
 ```
 处理数据<换行>
+
+阅读文献Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering
+了解模型结构，并下载论文原代码，理清原论文模型架构并复现原论文。
+之后阅读改代码即可。
+
+代码在源代码上进行大幅度修改
+mian.py 训练文件
+eval.py 测试文件
+tools.py 共享层
+utils.py 工具类
+language_model.py 文本模型类
+fusion_modules.py 多模态融合类
+classifier.py 分类器
+fc.py 全连接层类等
+dataset.py 数据集预处理类
+coor_main.py 模型架构类
+attention.py 注意力机制类
+loss_functions.py 损失函数类
+...
 
 ### 训练
 ```
