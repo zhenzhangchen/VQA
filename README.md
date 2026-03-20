@@ -1,59 +1,36 @@
-# CVPR2020 Counterfactual Samples Synthesizing for Robust VQA
-This repo contains code for our paper ["Counterfactual Samples Synthesizing for Robust Visual Question Answering"](https://arxiv.org/pdf/2003.06576.pdf)
-This repo contains code modified from [here](https://github.com/chrisc36/bottom-up-attention-vqa),many thanks!
+### 先决条件
 
-### Prerequisites
+确保你有一台带有NVIDIA GPU和Python 2.7的机器，并且有大约100 GB的磁盘空间。<br>
 
-Make sure you are on a machine with a NVIDIA GPU and Python 2.7 with about 100 GB disk space. <br>
-h5py==2.10.0 <br>
 pytorch==1.1.0 <br>
-Click==7.0 <br>
+点击==7.0 <br>
 numpy==1.16.5 <br>
 tqdm==4.35.0 <br>
 
-### Data Setup
-You can use
+### 训练数据下载
+你可以使用
 ```
 bash tools/download.sh
 ```
-to download the data <br>
-and the rest of the data and trained model can be obtained from [BaiduYun](https://pan.baidu.com/s/1oHdwYDSJXC1mlmvu8cQhKw)(passwd:3jot) or [GoogleDrive](https://drive.google.com/drive/folders/13e-b76otJukupbjfC-n1s05L202PaFKQ?usp=sharing)
-unzip feature1.zip and feature2.zip and merge them into data/rcnn_feature/ <br>
-use
+下载数据<br>
+其余数据和训练模型可以从 [百度云](https://pan.baidu.com/s/1oHdwYDSJXC1mlmvu8cQhKw)(密码:3jot) 或者 [谷歌云端硬盘](https://drive.google.com/drive/folders/13e-b76otJukupbjfC-n1s05L202PaFKQ?usp=sharing)
+解压feature1.zip和feature2.zip，并将它们合并到data/rcnn_feature/<br>
+使用
 ```
-bash tools/process.sh 
+bash 工具/处理.sh
 ```
-to process the data <br>
+处理数据<br>
 
-### Training
-Run
+### 训练
+跑
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --dataset cpv2 --mode q_v_debias --debias learned_mixin --topq 1 --topv -1 --qvp 5 --output [] --seed 0
+CUDA_VISIBLE_DEVICES=1 nohup python train.py > train.out &
 ```
-to train a model
+训练一个模型
 
-### Testing
-Run
+### 测试
+跑
 ```
-CUDA_VISIBLE_DEVICES=0 python eval.py --dataset cpv2 --debias learned_mixin --model_state []
+CUDA_VISIBLE_DEVICES=1 nohup python eval.py > test.out &
 ```
-to eval a model
-
-
-
-## Citation
-
-If you find this code useful, please cite the following paper:
-
-  ```
-@inproceedings{chen2020counterfactual,
-  title={Counterfactual Samples Synthesizing for Robust Visual Question Answering},
-  author={Chen, Long and Yan, Xin and Xiao, Jun and Zhang, Hanwang and Pu, Shiliang and Zhuang, Yueting},
-  booktitle={CVPR},
-  year={2020}
-}
-  ```
-
-
-
-1、nohup python main.py --dataset cpv2 --mode updn --debias learned_mixin > 1.out &
+评估模型
